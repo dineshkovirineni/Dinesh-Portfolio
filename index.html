@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Dinesh Kovirineni — AI Software Engineer. Building LLM applications, RAG systems, and cloud-native backends at Sam's Club (Walmart). MS Computer Science, George Mason."/>
+  <title>Dinesh Kovirineni — AI Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%237C3AED'/><text y='.9em' font-size='52' x='50%' text-anchor='middle' font-family='sans-serif' font-weight='700' fill='%23A3E635'>DK</text></svg>">
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body>
+
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="#hero" class="logo">
+        <span class="logo-mark">DK</span>
+        <span class="logo-text">Dinesh Kovirineni</span>
+      </a>
+      <nav class="main-nav">
+        <a href="#skills">Stack</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a href="assets/resume/Dinesh_Kovirineni_Resume.pdf" download class="btn-resume">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Resume
+        </a>
+        <a href="https://mail.google.com/mail/?view=cm&to=dineshkovirineni0924@gmail.com&su=Hi%20Dinesh%2C%20let%27s%20connect!" target="_blank" rel="noopener" class="btn-email">Email Me</a>
+      </div>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="#skills" class="mobile-link">Stack</a>
+    <a href="#experience" class="mobile-link">Experience</a>
+    <a href="#projects" class="mobile-link">Projects</a>
+    <a href="#education" class="mobile-link">Education</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+    <a href="assets/resume/Dinesh_Kovirineni_Resume.pdf" download class="mobile-link">⬇ Download Resume</a>
+  </div>
+
+  <main>
+
+    <!-- HERO -->
+    <section id="hero" class="section-hero">
+      <canvas id="neural-canvas"></canvas>
+      <div class="hero-inner">
+        <div class="hero-left">
+          <div class="hero-photo-wrap">
+            <img src="data:image/jpeg;base64,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" alt="Dinesh Kovirineni" class="hero-photo"/>
+            <div class="hero-photo-ring"></div>
+          </div>
+          <div class="hero-chips">
+            <span class="chip chip-violet">● Sam's Club · Walmart</span>
+            <span class="chip chip-lime">AI Engineer</span>
+            <span class="chip chip-outline">Frisco, TX</span>
+          </div>
+          <h1 class="hero-name">Dinesh<br/><span class="name-grad">Kovirineni</span></h1>
+          <p class="hero-role">AI Software Engineer</p>
+          <p class="hero-spec">Backend · Cloud · GenAI · RAG · Microservices</p>
+          <p class="hero-summary">
+            Building <strong>AI-powered catalog intelligence</strong>, <strong>RAG pipelines</strong>, and <strong>real-time pricing systems</strong> at Sam's Club (Walmart) — serving 600+ club locations. 3+ years across LLM applications, Go/Java microservices, Vertex AI, Pinecone, and GCP. MS Computer Science, George Mason University.
+          </p>
+          <div class="hero-ctas">
+            <a href="#experience" class="btn-primary">View My Work</a>
+            <a href="https://mail.google.com/mail/?view=cm&to=dineshkovirineni0924@gmail.com&su=Hi%20Dinesh%2C%20let%27s%20connect!" target="_blank" rel="noopener" class="btn-outline">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              Email
+            </a>
+          </div>
+          <div class="hero-links">
+            <a href="https://www.linkedin.com/in/dinesh-kovirineni-1a04a4193/" target="_blank" rel="noopener" class="hlink">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn
+            </a>
+            <span class="hlink-sep"></span>
+            <a href="https://github.com/dineshkovirineni" target="_blank" rel="noopener" class="hlink">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+              GitHub
+            </a>
+            <span class="hlink-sep"></span>
+            <a href="mailto:dineshkovirineni0924@gmail.com" class="hlink">dineshkovirineni0924@gmail.com</a>
+            <span class="hlink-sep"></span>
+            <a href="tel:+17035812813" class="hlink">(703) 581-2813</a>
+          </div>
+        </div>
+
+        <!-- Stats panel -->
+        <div class="hero-right">
+          <div class="stat-stack">
+            <div class="stat-card sc-violet reveal-hero">
+              <div class="sc-val">600<span class="sc-plus">+</span></div>
+              <div class="sc-lbl">Club Locations Migrated</div>
+            </div>
+            <div class="stat-card sc-lime reveal-hero">
+              <div class="sc-val">50<span class="sc-pct">%</span></div>
+              <div class="sc-lbl">Pricing Latency Reduction</div>
+            </div>
+            <div class="stat-card sc-dark reveal-hero">
+              <div class="sc-val">&lt;100<span class="sc-unit">ms</span></div>
+              <div class="sc-lbl">POS API Query Latency</div>
+            </div>
+            <div class="stat-card sc-dark reveal-hero">
+              <div class="sc-val">35<span class="sc-pct">%</span></div>
+              <div class="sc-lbl">GraphQL Retrieval Efficiency</div>
+            </div>
+            <div class="stat-card sc-dark reveal-hero">
+              <div class="sc-val">85<span class="sc-pct">%</span></div>
+              <div class="sc-lbl">Text-to-SQL First-Try Success</div>
+            </div>
+            <div class="stat-card sc-dark reveal-hero">
+              <div class="sc-val">92<span class="sc-pct">%</span></div>
+              <div class="sc-lbl">RAG Field-Extraction Accuracy</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section-skills">
+      <div class="container">
+        <p class="eyebrow reveal">// technical stack</p>
+        <h2 class="section-heading reveal">Built For Scale &amp; Intelligence</h2>
+        <div class="skills-grid">
+
+          <div class="skill-card reveal sc-featured">
+            <div class="skc-top"><span class="skc-icon">🤖</span><span class="skc-title">AI &amp; ML</span><span class="skc-badge">Core</span></div>
+            <div class="skc-tags">
+              <span class="stag stag-violet">Generative AI</span><span class="stag stag-violet">LLM Applications</span>
+              <span class="stag stag-violet">RAG</span><span class="stag stag-violet">LangChain</span>
+              <span class="stag stag-violet">Vertex AI</span><span class="stag stag-violet">Hugging Face</span>
+              <span class="stag stag-violet">OpenAI</span><span class="stag">Vector Embeddings</span>
+              <span class="stag">Semantic Search</span><span class="stag">NLP</span><span class="stag">Prompt Engineering</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skc-top"><span class="skc-icon">💻</span><span class="skc-title">Languages</span></div>
+            <div class="skc-tags">
+              <span class="stag stag-lime">Python</span><span class="stag stag-lime">Go</span>
+              <span class="stag stag-lime">Java</span><span class="stag">Elixir</span>
+              <span class="stag">TypeScript</span><span class="stag">JavaScript</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skc-top"><span class="skc-icon">⚙️</span><span class="skc-title">Backend</span></div>
+            <div class="skc-tags">
+              <span class="stag stag-lime">FastAPI</span><span class="stag">REST APIs</span>
+              <span class="stag">GraphQL</span><span class="stag">gRPC</span>
+              <span class="stag">Microservices</span><span class="stag">Event-Driven Architecture</span>
+              <span class="stag">Distributed Systems</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skc-top"><span class="skc-icon">🗄️</span><span class="skc-title">Databases</span></div>
+            <div class="skc-tags">
+              <span class="stag stag-violet">Pinecone</span><span class="stag">Cassandra</span>
+              <span class="stag">PostgreSQL</span><span class="stag">MySQL</span>
+              <span class="stag">BigQuery</span><span class="stag">Redis</span><span class="stag">MariaDB</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skc-top"><span class="skc-icon">☁️</span><span class="skc-title">Cloud &amp; DevOps</span></div>
+            <div class="skc-tags">
+              <span class="stag stag-lime">GCP</span><span class="stag stag-lime">GKE</span>
+              <span class="stag">AWS</span><span class="stag">Kubernetes</span>
+              <span class="stag">Docker</span><span class="stag">Kafka</span>
+              <span class="stag">Jenkins</span><span class="stag">CodePipeline</span>
+              <span class="stag">CloudWatch</span><span class="stag">CloudFormation</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section-experience">
+      <div class="container">
+        <p class="eyebrow reveal">// work experience</p>
+        <h2 class="section-heading reveal">Production at Scale</h2>
+        <div class="exp-list">
+
+          <!-- Sam's Club -->
+          <div class="exp-block reveal">
+            <div class="exp-block-header">
+              <div class="exp-header-left">
+                <h3 class="exp-org">Sam's Club <span class="exp-parent">(Walmart)</span></h3>
+                <p class="exp-role">Software Engineer, AI &amp; Merchandising (Contract)</p>
+              </div>
+              <div class="exp-header-right">
+                <span class="exp-period">May 2024 – Present</span>
+                <span class="exp-loc">Frisco, TX</span>
+                <span class="exp-badge-current">● Current</span>
+              </div>
+            </div>
+
+            <div class="exp-project-block">
+              <div class="epb-label">
+                <span class="epb-dot epb-violet"></span>
+                Catalog AI
+              </div>
+              <ul class="exp-bullets">
+                <li>Developed an <strong>AI-powered catalog intelligence platform</strong> using React, TypeScript, Python, FastAPI, and GKE for automated product categorization and semantic search.</li>
+                <li>Built <strong>RAG workflows with Vertex AI and Pinecone</strong> to improve product-to-category matching and reduce manual catalog curation.</li>
+                <li>Engineered <strong>vector embedding pipelines</strong> using Vertex AI and Cloud Storage for SKU similarity matching and automated category recommendations.</li>
+                <li>Implemented <strong>event-driven catalog ingestion</strong> using Kafka and GCP Pub/Sub for real-time product updates.</li>
+              </ul>
+              <div class="epb-tags">
+                <span class="etag">Python</span><span class="etag">FastAPI</span><span class="etag">Vertex AI</span>
+                <span class="etag">Pinecone</span><span class="etag">RAG</span><span class="etag">Kafka</span><span class="etag">GKE</span>
+              </div>
+            </div>
+
+            <div class="exp-project-block">
+              <div class="epb-label">
+                <span class="epb-dot epb-lime"></span>
+                Pricing RT
+              </div>
+              <ul class="exp-bullets">
+                <li>Built <strong>Go-based ingestion services</strong> to consume pricing feeds and synchronize data with Walmart eCommerce schemas through schema transformation.</li>
+                <li>Developed <strong>Java gRPC services with Redis caching</strong>, reducing pricing query latency by <strong>50%</strong>.</li>
+                <li>Enabled <strong>real-time pricing synchronization</strong> using Kafka and Cassandra, replacing batch processing.</li>
+              </ul>
+              <div class="epb-tags">
+                <span class="etag">Go</span><span class="etag">Java</span><span class="etag">gRPC</span>
+                <span class="etag">Redis</span><span class="etag">Kafka</span><span class="etag">Cassandra</span>
+              </div>
+            </div>
+
+            <div class="exp-project-block">
+              <div class="epb-label">
+                <span class="epb-dot epb-white"></span>
+                In-Club Checkout Modernization
+              </div>
+              <ul class="exp-bullets">
+                <li>Migrated in-club checkout systems from legacy SMART architecture to <strong>Elixir-based cloud architecture</strong> using GCP and Kubernetes across <strong>600+ club locations</strong>.</li>
+                <li>Built high-throughput <strong>Go microservices and GraphQL services</strong> for CPC document ingestion and real-time POS APIs — reducing query latency to <strong>under 100ms</strong> and improving retrieval efficiency by <strong>35%</strong>.</li>
+              </ul>
+              <div class="epb-tags">
+                <span class="etag">Go</span><span class="etag">Elixir</span><span class="etag">GraphQL</span>
+                <span class="etag">Kubernetes</span><span class="etag">GCP</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- EPSoft -->
+          <div class="exp-block reveal">
+            <div class="exp-block-header">
+              <div class="exp-header-left">
+                <h3 class="exp-org">EPSoft</h3>
+                <p class="exp-role">Software Engineer</p>
+              </div>
+              <div class="exp-header-right">
+                <span class="exp-period">May 2023 – May 2024</span>
+                <span class="exp-loc">Texas, USA</span>
+              </div>
+            </div>
+            <ul class="exp-bullets" style="padding: 0 2rem 1.5rem;">
+              <li>Developed scalable <strong>Python/FastAPI backend microservices</strong> using AWS EC2, Lambda, and S3 for high-throughput API workloads.</li>
+              <li>Designed RESTful APIs and implemented <strong>CloudWatch and CloudFormation</strong> for monitoring and infrastructure management.</li>
+              <li>Built <strong>CI/CD pipelines</strong> using Jenkins and AWS CodePipeline; containerized services with Docker and deployed on Kubernetes.</li>
+            </ul>
+            <div class="epb-tags" style="padding: 0 2rem 1.5rem;">
+              <span class="etag">Python</span><span class="etag">FastAPI</span><span class="etag">AWS</span>
+              <span class="etag">Docker</span><span class="etag">Kubernetes</span><span class="etag">Jenkins</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section-projects">
+      <div class="container">
+        <p class="eyebrow reveal">// academic projects</p>
+        <h2 class="section-heading reveal">Deep Technical Work</h2>
+        <div class="proj-grid">
+
+          <div class="proj-card reveal proj-featured">
+            <div class="proj-top">
+              <span class="proj-domain">LLM · SQL · Agent</span>
+              <a href="https://github.com/dineshkovirineni/Text-to-SQL-Analytics-Agent" target="_blank" rel="noopener" class="proj-gh-link">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                GitHub
+              </a>
+            </div>
+            <h3 class="proj-title">Text-to-SQL Analytics Agent</h3>
+            <div class="proj-accuracy-badge">85% first-try success · 172 tests</div>
+            <p class="proj-desc">LangGraph-orchestrated AI agent converting natural-language questions into validated BigQuery SQL. Multi-stage pipeline: <strong>semantic schema retrieval</strong> (pruning 7 tables to the relevant subset), <strong>7 AST guardrail checks</strong> via sqlglot blocking DML/DDL and hallucinated columns, cost dry-run gating, and a self-correction loop feeding exact errors back to the model.</p>
+            <div class="proj-tags">
+              <span class="ptag ptag-violet">LangChain</span><span class="ptag ptag-violet">LangGraph</span>
+              <span class="ptag ptag-violet">Claude</span><span class="ptag">Python</span>
+              <span class="ptag">FastAPI</span><span class="ptag">BigQuery</span>
+              <span class="ptag">sqlglot</span><span class="ptag">Docker</span>
+            </div>
+          </div>
+
+          <div class="proj-card reveal">
+            <div class="proj-top">
+              <span class="proj-domain">RAG · Document AI</span>
+              <a href="https://github.com/dineshkovirineni/Automated-Document-Summarization-Extraction-Tool" target="_blank" rel="noopener" class="proj-gh-link">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                GitHub
+              </a>
+            </div>
+            <h3 class="proj-title">Automated Document Summarization &amp; Extraction</h3>
+            <div class="proj-accuracy-badge">92% field-extraction accuracy · 47 tests</div>
+            <p class="proj-desc">RAG pipeline ingesting PDF, DOCX, TXT, MD into Pinecone serverless (token-aware chunking, namespace isolation). Six focused per-field extraction passes using a fine-tuned Hugging Face LLM, <strong>self-consistency voting</strong> (K passes, majority merge), and <strong>evidence grounding</strong> (65/35 grounding-over-vote-agreement) — fields below confidence floor are dropped, not hallucinated. Reduced manual document review time by <strong>45%</strong>.</p>
+            <div class="proj-tags">
+              <span class="ptag ptag-violet">Pinecone</span><span class="ptag ptag-violet">Hugging Face</span>
+              <span class="ptag">Python</span><span class="ptag">Pydantic</span><span class="ptag">pytest</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section-education">
+      <div class="container">
+        <p class="eyebrow reveal">// education</p>
+        <h2 class="section-heading reveal">Academic Foundation</h2>
+        <div class="edu-grid">
+          <div class="edu-card reveal featured-edu">
+            <h3 class="edu-degree">M.S. Computer Science</h3>
+            <p class="edu-school">George Mason University</p>
+            <p class="edu-loc">Virginia, USA · May 2023</p>
+          </div>
+          <div class="edu-card reveal">
+            <h3 class="edu-degree">B.Tech. Information Technology</h3>
+            <p class="edu-school">Gokaraju Rangaraju Institute of Engineering and Technology</p>
+            <p class="edu-loc">Telangana, India · August 2021</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section-contact">
+      <div class="container">
+        <div class="contact-inner reveal">
+          <p class="eyebrow eyebrow-lime">// get in touch</p>
+          <h2 class="contact-heading">Open to AI Engineering Roles</h2>
+          <p class="contact-sub">Looking for AI software engineering, backend, and cloud-native positions. Based in Frisco, TX.</p>
+          <div class="contact-actions">
+            <a href="https://mail.google.com/mail/?view=cm&to=dineshkovirineni0924@gmail.com&su=Hi%20Dinesh%2C%20let%27s%20connect!" target="_blank" rel="noopener" class="btn-contact-lg">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              Email Dinesh
+            </a>
+            <a href="assets/resume/Dinesh_Kovirineni_Resume.pdf" download class="btn-dl-lg">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download Resume
+            </a>
+          </div>
+          <div class="contact-row">
+            <a href="tel:+17035812813" class="crow">(703) 581-2813</a>
+            <span class="crow-sep">·</span>
+            <a href="mailto:dineshkovirineni0924@gmail.com" class="crow">dineshkovirineni0924@gmail.com</a>
+            <span class="crow-sep">·</span>
+            <a href="https://www.linkedin.com/in/dinesh-kovirineni-1a04a4193/" target="_blank" class="crow">LinkedIn</a>
+            <span class="crow-sep">·</span>
+            <a href="https://github.com/dineshkovirineni" target="_blank" class="crow">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span class="footer-name">Dinesh Kovirineni</span>
+      <span class="footer-copy">© 2025 · AI Software Engineer · Frisco, TX</span>
+      <span class="footer-tag">Sam's Club · Walmart</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
